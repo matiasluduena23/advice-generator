@@ -1,0 +1,34 @@
+---
+import { getImage } from 'astro:assets';
+
+const dividerMobileImg = '/images/pattern-divider-mobile.svg';
+const dividerDesktopImg = '/images/pattern-divider-desktop.svg';
+const iconImg = '/images/icon-dice.svg';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Frontend Mentor | Advice generator app</title>
+    </head>
+    <body>
+        <!-- https://api.adviceslip.com/advice -->
+
+        <main>
+            <p>Advice # <span class="id"></span></p>
+            <h1>"<span class="advice"></span>"</h1>
+            <picture>
+                <source media="(min-width:650px)" srcset={dividerDesktopImg} />
+                <img src={dividerMobileImg} alt="divider" />
+            </picture>
+            <button class="btn">
+                <img src={iconImg} alt="icon dice button" />
+            </button>
+        </main>
+
+        <script src="../scripts/main.js"></script>
+    </body>
+</html>
