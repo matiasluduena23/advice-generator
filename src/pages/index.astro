@@ -1,9 +1,6 @@
 ---
-import { getImage } from 'astro:assets';
-
-const dividerMobileImg = '/images/pattern-divider-mobile.svg';
-const dividerDesktopImg = '/images/pattern-divider-desktop.svg';
-const iconImg = '/images/icon-dice.svg';
+import CardAdvice from '../components/CardAdvice.astro';
+import '../style/global.css';
 ---
 
 <html lang="en">
@@ -17,17 +14,7 @@ const iconImg = '/images/icon-dice.svg';
     <body>
         <!-- https://api.adviceslip.com/advice -->
 
-        <main>
-            <p>Advice # <span class="id"></span></p>
-            <h1>"<span class="advice"></span>"</h1>
-            <picture>
-                <source media="(min-width:650px)" srcset={dividerDesktopImg} />
-                <img src={dividerMobileImg} alt="divider" />
-            </picture>
-            <button class="btn">
-                <img src={iconImg} alt="icon dice button" />
-            </button>
-        </main>
+        <CardAdvice />
 
         <script src="../scripts/main.js"></script>
     </body>

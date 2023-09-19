@@ -1,13 +1,13 @@
 
 
 
-// async function getAdvice() {
+async function getAdvice() {
     
-//     const res = await fetch('https://api.adviceslip.com/advice');
-//     const {slip} = await res.json();
-//     displayAdvice(slip);
+    const res = await fetch('https://api.adviceslip.com/advice');
+    const {slip} = await res.json();
+    displayAdvice(slip);
   
-// }
+}
 
 function displayAdvice(data){
     const idElement = document.querySelector('.id');
@@ -16,7 +16,8 @@ function displayAdvice(data){
     adviceElement.innerHTML = data.advice; 
 }
 
+getAdvice()
 
-const btn = document.querySelector('.btn').addEventListener('click', getAdvice )
+ document.querySelector('.btn').addEventListener('click', getAdvice )
 
 

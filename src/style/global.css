@@ -7,7 +7,7 @@
 }
 
 :root {
-  --green-clr: hsl(150, 100%, 66%);
+  --green-clr: rgb(82, 255, 168);
   --cyan-clr: hsl(193, 38%, 86%);
 
   --dark-blue: hsl(218, 23%, 16%);
@@ -18,10 +18,10 @@
 
 body {
   font-family: 'Manrope', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  background-color: var(--cream);
+  font-size: 14px;
+  background-color: var(--dark-blue);
   display: grid;
+  justify-content: center;
   align-items: center;
   width: 90%;
   min-height: 100vh;
